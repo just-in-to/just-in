@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>just in | 止まりかけた現場に、突破力を。</title>
+    
+    <!-- 1. Fonts (最優先で読み込み) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- 2. AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- 3. Tailwind CSS Core -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- 4. Tailwind CSS Configuration (コアの直後に実行) -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        justin: {
+                            main: '#222222',       /* Charcoal Black */
+                            base: '#F5F3F0',       /* Warm White */
+                            accent: '#F2994A',     /* Rescue Orange */
+                            sub: '#5E6B57',        /* Deep Khaki */
+                            gray: '#E9E6E1',       /* Light Gray */
+                            white2: '#F3F0EB',     /* Sub White */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Zen Kaku Gothic New"', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- 5. Custom CSS -->
+    <style>
+        body {
+            background-color: #F5F3F0;
+            color: #222222;
+            overflow-x: hidden;
+            font-feature-settings: "palt";
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .grid-border {
+            border-color: #E9E6E1;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 w-full bg-justin-base border-b border-justin-gray px-4 md:px-8 py-4 flex justify-between items-center">
+        <div class="flex items-baseline gap-2">
+            <a href="#" class="font-inter font-black text-2xl tracking-tighter text-justin-main">just<span class="text-justin-accent">in</span></a>
+            <span class="hidden lg:inline text-xs text-justin-sub tracking-widest font-medium">現場伴走型ロジスティクス支援</span>
+        </div>
+        
+        <div class="flex items-center gap-8">
+            <div class="hidden md:flex items-center gap-6 text-xs font-bold tracking-wider text-justin-main">
+                <a href="#why" class="hover:text-justin-accent transition-colors">WHY</a>
+                <a href="#services" class="hover:text-justin-accent transition-colors">SERVICE</a>
+                <a href="#how-we-move" class="hover:text-justin-accent transition-colors">STANCE</a>
+                <a href="#value" class="hover:text-justin-accent transition-colors">VALUE</a>
+                <a href="#case" class="hover:text-justin-accent transition-colors">CASE</a>
+                <a href="#message" class="hover:text-justin-accent transition-colors">MESSAGE</a>
+            </div>
+            <a href="#contact" class="bg-justin-main text-white text-xs font-bold px-4 py-2.5 hover:bg-justin-accent transition-colors tracking-wider">
+                CONTACT
+            </a>
+        </div>
+    </nav>
+
+    <!-- ① HERO SECTION -->
+    <section class="w-full border-b border-justin-main bg-justin-white2">
+        <div class="grid grid-cols-1 lg:grid-cols-12 min-h-[calc(100vh-69px)]">
+            
+            <div class="lg:col-span-7 flex flex-col justify-between p-6 md:p-12 border-b lg:border-b-0 lg:border-r border-justin-main">
+                <div class="pt-4">
+                    <span class="font-inter font-extrabold text-xs tracking-widest text-justin-accent uppercase block mb-6">Corporate Profile</span>
+                    <h1 class="text-3xl md:text-5xl lg:text-6xl font-black text-justin-main leading-[1.15] tracking-tighter mb-8" data-aos="fade-up">
+                        止まりかけた現場に、<br class="hidden md:inline">突破力を。
+                    </h1>
+                </div>
+                
+                <div class="border-t-2 border-justin-main pt-6 mt-8">
+                    <p class="text-sm font-bold text-justin-sub tracking-wider mb-2">
+                        必要な瞬間に、ちゃんと届く。
+                    </p>
+                    <p class="text-sm md:text-base font-medium text-justin-main leading-relaxed max-w-xl">
+                        現場の熱量を止めないために、私たちは今、動きます。単なる物流支援ではなく、再び前を向ける状態へ動かしていく現場伴走型支援。
+                    </p>
+                </div>
+            </div>
+
+            <div class="lg:col-span-5 grid grid-rows-2 h-full min-h-[400px] lg:min-h-0 bg-justin-main">
+                <div class="relative overflow-hidden border-b border-justin-main">
+                    <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1000&auto=format&fit=crop" 
+                         alt="just in 現場物流" 
+                         class="w-full h-full object-cover grayscale opacity-80 hover:scale-105 transition-transform duration-700">
+                    <div class="absolute bottom-3 left-3 bg-justin-accent text-justin-main text-[10px] font-inter font-black px-2 py-0.5 uppercase tracking-widest">
+                        01 / MOVEMENT
+                    </div>
+                </div>
+                <div class="relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=1000&auto=format&fit=crop" 
+                         alt="just in 輸送・スピード感" 
+                         class="w-full h-full object-cover grayscale opacity-70 hover:scale-105 transition-transform duration-700">
+                    <div class="absolute bottom-3 left-3 bg-justin-main text-white text-[10px] font-inter font-black px-2 py-0.5 uppercase tracking-widest border border-white/20">
+                        just<span class="text-justin-accent">in</span> / 02
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ② WHY SECTION -->
+    <section id="why" class="w-full border-b border-justin-main py-16 md:py-24 px-4 md:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                <div class="lg:col-span-4 lg:sticky lg:top-24">
+                    <span class="font-inter font-bold text-xs tracking-widest text-justin-accent block mb-2">WHY WE EXIST</span>
+                    <h2 class="text-2xl md:text-4xl font-black text-justin-main tracking-tight">なぜ just in は<br class="hidden lg:inline">動くのか</h2>
+                    <div class="w-12 h-1 bg-justin-accent mt-4"></div>
+                </div>
+
+                <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-8 bg-justin-white2 p-6 md:p-8 border border-justin-gray">
+                    <div class="space-y-6" data-aos="fade-up">
+                        <span class="text-[10px] font-inter font-bold text-white bg-justin-sub px-2 py-1 uppercase tracking-wider inline-block">The Background</span>
+                        <h3 class="text-lg font-bold text-justin-main leading-snug">小規模物流会社が抱える、<br>疲弊と属人化、現場停滞。</h3>
+                        <p class="text-sm leading-relaxed text-justin-main/80">
+                            人手不足、高まる需要、休めない現場。多くの現場がギリギリの熱量で耐えています。しかし、システム導入やコンサルタントの正論だけでは、明日の荷物は動きません。
+                        </p>
+                    </div>
+                    <div class="space-y-6" data-aos="fade-up" data-aos-delay="100">
+                        <span class="text-[10px] font-inter font-bold text-white bg-justin-main px-2 py-1 uppercase tracking-wider inline-block">Our Thought</span>
+                        <h3 class="text-lg font-bold text-justin-main leading-snug">“現場を止めたくない”<br>その一心で、私たちは伴走する。</h3>
+                        <p class="text-sm leading-relaxed text-justin-main/80">
+                            私たちは離れたオフィスから指示を出す存在ではありません。現場の熱量を止めず、再び前を向ける状態へ動かしていく。泥くさく、しかし徹底的に整理された手法で道を切り拓きます。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ③ WHAT WE DO SECTION -->
+    <section id="services" class="w-full bg-justin-main text-white py-16 md:py-24 px-4 md:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-12">
+                <span class="font-inter font-bold text-xs tracking-widest text-justin-accent block mb-2">WHAT WE DO</span>
+                <h2 class="text-2xl md:text-4xl font-black tracking-tight">現場を前に進める支援</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-t border-l border-white/10">
+                <div class="p-6 md:p-8 border-r border-b border-white/10 hover:bg-white/5 transition-colors" data-aos="fade-up">
+                    <div class="text-justin-accent mb-4"><i data-lucide="package-check" class="w-8 h-8"></i></div>
+                    <h3 class="text-lg font-bold mb-3 tracking-wide">業務支援</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed">現場の負担をその場で軽減。実務に直結する即戦力としてのリソースを提供し、稼働の穴を埋めます。</p>
+                </div>
+                <div class="p-6 md:p-8 border-r border-b border-white/10 hover:bg-white/5 transition-colors" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-justin-accent mb-4"><i data-lucide="shuffle" class="w-8 h-8"></i></div>
+                    <h3 class="text-lg font-bold mb-3 tracking-wide">物流マッチング</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed">小回りの利くネットワークを活用し、必要な瞬間に最適なリソースとルートを瞬時に結びつけます。</p>
+                </div>
+                <div class="p-6 md:p-8 border-r border-b border-white/10 hover:bg-white/5 transition-colors" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-justin-accent mb-4"><i data-lucide="trending-up" class="w-8 h-8"></i></div>
+                    <h3 class="text-lg font-bold mb-3 tracking-wide">現場改善</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed">動線を見直し、無駄を削ぎ落とす。綺麗事ではない、明日から機能するリアルな現場最適化を施します。</p>
+                </div>
+                <div class="p-6 md:p-8 border-r border-b border-white/10 hover:bg-white/5 transition-colors" data-aos="fade-up">
+                    <div class="text-justin-accent mb-4"><i data-lucide="cpu" class="w-8 h-8"></i></div>
+                    <h3 class="text-lg font-bold mb-3 tracking-wide">AI活用支援</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed">最先端を野暮ったくなく取り入れる。現場が迷わず使える、実用本位のIT・AIツール導入を推進します。</p>
+                </div>
+                <div class="p-6 md:p-8 border-r border-b border-white/10 hover:bg-white/5 transition-colors" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-justin-accent mb-4"><i data-lucide="layers" class="w-8 h-8"></i></div>
+                    <h3 class="text-lg font-bold mb-3 tracking-wide">業務整理</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed">属人化してブラックボックスとなった作業をクリアに可視化。誰でも動かせる仕組みへ再配置します。</p>
+                </div>
+                <div class="p-6 md:p-8 border-r border-b border-white/10 hover:bg-white/5 transition-colors" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-justin-accent mb-4"><i data-lucide="users" class="w-8 h-8"></i></div>
+                    <h3 class="text-lg font-bold mb-3 tracking-wide">人と人をつなぐ調整</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed">現場の衝突や連携不足を人間力で解決。現場で対話を重ね、チーム全体の潤滑油として機能します。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ④ HOW WE MOVE SECTION -->
+    <section id="how-we-move" class="w-full bg-justin-white2 border-b border-justin-main py-16 md:py-24 px-4 md:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-12">
+                <div class="lg:col-span-6">
+                    <span class="font-inter font-bold text-xs tracking-widest text-justin-accent block mb-2">OUR STANCE</span>
+                    <h2 class="text-2xl md:text-4xl font-black tracking-tight text-justin-main">机上ではなく、現場で考える。</h2>
+                </div>
+                <div class="lg:col-span-6 lg:text-right">
+                    <p class="text-sm font-medium text-justin-sub">言葉だけでなく、速度と小回りで体現する5つの行動指針。</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 border-t border-l border-justin-gray">
+                <div class="p-6 md:p-8 bg-white border-r border-b border-justin-gray flex flex-col justify-between min-h-[200px] sm:min-h-[220px]">
+                    <span class="font-inter font-black text-4xl text-justin-accent/30">01</span>
+                    <div>
+                        <h3 class="font-bold text-xl md:text-2xl text-justin-main mb-3">小回り</h3>
+                        <p class="text-sm text-justin-sub leading-relaxed">大手が断る隙間を埋める機動力。</p>
+                    </div>
+                </div>
+                <div class="p-6 md:p-8 bg-white border-r border-b border-justin-gray flex flex-col justify-between min-h-[200px] sm:min-h-[220px]">
+                    <span class="font-inter font-black text-4xl text-justin-accent">02</span>
+                    <div>
+                        <h3 class="font-bold text-xl md:text-2xl text-justin-main mb-3">即対応</h3>
+                        <p class="text-sm text-justin-sub leading-relaxed">検討で時間を溶かさず、すぐ動く。</p>
+                    </div>
+                </div>
+                <div class="p-6 md:p-8 bg-white border-r border-b border-justin-gray flex flex-col justify-between min-h-[200px] sm:min-h-[220px]">
+                    <span class="font-inter font-black text-4xl text-justin-accent/30">03</span>
+                    <div>
+                        <h3 class="font-bold text-xl md:text-2xl text-justin-main mb-3">人間力</h3>
+                        <p class="text-sm text-justin-sub leading-relaxed">最後は人と人の信頼。誠実に向き合う。</p>
+                    </div>
+                </div>
+                <div class="p-6 md:p-8 bg-white border-r border-b border-justin-gray flex flex-col justify-between min-h-[200px] sm:min-h-[220px]">
+                    <span class="font-inter font-black text-4xl text-justin-accent/30">04</span>
+                    <div>
+                        <h3 class="font-bold text-xl md:text-2xl text-justin-main mb-3">柔軟性</h3>
+                        <p class="text-sm text-justin-sub leading-relaxed">ルールに縛られず、現場最適を優先。</p>
+                    </div>
+                </div>
+                <div class="p-6 md:p-8 bg-white border-r border-b border-justin-gray flex flex-col justify-between min-h-[200px] sm:min-h-[220px] sm:col-span-2 lg:col-span-1">
+                    <span class="font-inter font-black text-4xl text-justin-accent/30">05</span>
+                    <div>
+                        <h3 class="font-bold text-xl md:text-2xl text-justin-main mb-3">社会貢献</h3>
+                        <p class="text-sm text-justin-sub leading-relaxed">物流のインフラの底を、静かに支える。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ⑤ VALUE SECTION -->
+    <section id="value" class="w-full bg-justin-main text-white py-20 px-4 md:px-8 relative overflow-hidden">
+        <div class="absolute inset-0 font-inter font-black text-[12vw] text-white/[0.02] uppercase select-none pointer-events-none whitespace-nowrap -left-10 -bottom-10">
+            KEEP MOVING FORWARD
+        </div>
+
+        <div class="max-w-5xl mx-auto relative z-10 text-center">
+            <span class="font-inter font-bold text-xs tracking-widest text-justin-accent block mb-6">OUR VALUE</span>
+            <h2 class="text-2xl md:text-4xl font-black mb-16 tracking-tight">私たちが止めたくないもの</h2>
+            
+            <div class="flex flex-wrap justify-center gap-x-12 gap-y-8 md:gap-y-12 max-w-4xl mx-auto">
+                <div class="text-center group" data-aos="zoom-in">
+                    <div class="text-3xl md:text-5xl font-black tracking-tight text-white mb-2 group-hover:text-justin-accent transition-colors">熱量</div>
+                    <div class="text-[10px] uppercase font-inter tracking-widest text-justin-sub">01 / PASSION</div>
+                </div>
+                <div class="text-center group" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="text-3xl md:text-5xl font-black tracking-tight text-white mb-2 group-hover:text-justin-accent transition-colors">信頼</div>
+                    <div class="text-[10px] uppercase font-inter tracking-widest text-justin-sub">02 / TRUST</div>
+                </div>
+                <div class="text-center group" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="text-3xl md:text-5xl font-black tracking-tight text-white mb-2 group-hover:text-justin-accent transition-colors">誇り</div>
+                    <div class="text-[10px] uppercase font-inter tracking-widest text-justin-sub">03 / PRIDE</div>
+                </div>
+                <div class="text-center group" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="text-3xl md:text-5xl font-black tracking-tight text-white mb-2 group-hover:text-justin-accent transition-colors">人の成長</div>
+                    <div class="text-[10px] uppercase font-inter tracking-widest text-justin-sub">04 / HUMAN</div>
+                </div>
+                <div class="text-center group" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="text-3xl md:text-5xl font-black tracking-tight text-white mb-2 group-hover:text-justin-accent transition-colors">持続力</div>
+                    <div class="text-[10px] uppercase font-inter tracking-widest text-justin-sub">05 / CONTINUATION</div>
+                </div>
+                <div class="text-center group" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="text-3xl md:text-5xl font-black tracking-tight text-white mb-2 group-hover:text-justin-accent transition-colors">貢献意欲</div>
+                    <div class="text-[10px] uppercase font-inter tracking-widest text-justin-sub">06 / CONTRIBUTION</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ⑥ CASE SECTION -->
+    <section id="case" class="w-full border-b border-justin-main py-16 md:py-24 px-4 md:px-8">
+        <div class="max-w-6xl mx-auto">
+            <div class="mb-12">
+                <span class="font-inter font-bold text-xs tracking-widest text-justin-accent block mb-2">CASE STUDIES</span>
+                <h2 class="text-2xl md:text-4xl font-black tracking-tight text-justin-main">現場の変化</h2>
+            </div>
+
+            <div class="space-y-4">
+                <div class="grid grid-cols-1 md:grid-cols-12 border border-justin-gray bg-white" data-aos="fade-up">
+                    <div class="md:col-span-2 bg-justin-main text-white p-4 flex flex-col justify-center items-center md:items-start border-b md:border-b-0 md:border-r border-justin-gray">
+                        <span class="text-[10px] font-inter tracking-widest uppercase text-gray-400">CASE 01</span>
+                        <span class="font-bold text-sm mt-1">リソース最適化</span>
+                    </div>
+                    <div class="md:col-span-5 p-6 bg-justin-main/[0.03] flex items-start gap-4">
+                        <span class="text-[10px] font-bold px-2 py-0.5 bg-gray-400 text-white uppercase rounded-sm">BEFORE</span>
+                        <div>
+                            <h4 class="font-bold text-justin-main mb-1 text-sm">現場疲弊と属人化</h4>
+                            <p class="text-sm text-justin-sub leading-relaxed">特定のリーダーにのみ負担がかかり、体調不良者が出た瞬間に機能停止しかけていた過酷な現場。</p>
+                        </div>
+                    </div>
+                    <div class="hidden md:flex md:col-span-1 justify-center items-center text-justin-accent bg-justin-white2">
+                        <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                    </div>
+                    <div class="md:col-span-4 p-6 bg-justin-accent/10 flex items-start gap-4 border-t md:border-t-0 border-justin-gray">
+                        <span class="text-[10px] font-bold px-2 py-0.5 bg-justin-accent text-white uppercase rounded-sm">AFTER</span>
+                        <div>
+                            <h4 class="font-bold text-justin-main mb-1 text-sm">流れの劇的な改善</h4>
+                            <p class="text-sm text-justin-main font-medium leading-relaxed">実務整理とAIによるタスク可視化を行い、属人化を排除。全員が等しく動ける健やかな現場へ変革。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-12 border border-justin-gray bg-white" data-aos="fade-up" data-aos-delay="100">
+                    <div class="md:col-span-2 bg-justin-main text-white p-4 flex flex-col justify-center items-center md:items-start border-b md:border-b-0 md:border-r border-justin-gray">
+                        <span class="text-[10px] font-inter tracking-widest uppercase text-gray-400">CASE 02</span>
+                        <span class="font-bold text-sm mt-1">コミュニケーション</span>
+                    </div>
+                    <div class="md:col-span-5 p-6 bg-justin-main/[0.03] flex items-start gap-4">
+                        <span class="text-[10px] font-bold px-2 py-0.5 bg-gray-400 text-white uppercase rounded-sm">BEFORE</span>
+                        <div>
+                            <h4 class="font-bold text-justin-main mb-1 text-sm">連携不足と空気の悪化</h4>
+                            <p class="text-sm text-justin-sub leading-relaxed">事務所とドライバー、庫内スタッフ間で情報が分断され、ミスが起きてもなすりつけ合う冷え切った状態。</p>
+                        </div>
+                    </div>
+                    <div class="hidden md:flex md:col-span-1 justify-center items-center text-justin-accent bg-justin-white2">
+                        <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                    </div>
+                    <div class="md:col-span-4 p-6 bg-justin-accent/10 flex items-start gap-4 border-t md:border-t-0 border-justin-gray">
+                        <span class="text-[10px] font-bold px-2 py-0.5 bg-justin-accent text-white uppercase rounded-sm">AFTER</span>
+                        <div>
+                            <h4 class="font-bold text-justin-main mb-1 text-sm">会話と笑顔の総量増加</h4>
+                            <p class="text-sm text-justin-main font-medium leading-relaxed">私たちが中間に立ち、現場で対話を重ね、チーム全体の潤滑油として機能。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-12 border border-justin-gray bg-white" data-aos="fade-up" data-aos-delay="200">
+                    <div class="md:col-span-2 bg-justin-main text-white p-4 flex flex-col justify-center items-center md:items-start border-b md:border-b-0 md:border-r border-justin-gray">
+                        <span class="text-[10px] font-inter tracking-widest uppercase text-gray-400">CASE 03</span>
+                        <span class="font-bold text-sm mt-1">マインドセット</span>
+                    </div>
+                    <div class="md:col-span-5 p-6 bg-justin-main/[0.03] flex items-start gap-4">
+                        <span class="text-[10px] font-bold px-2 py-0.5 bg-gray-400 text-white uppercase rounded-sm">BEFORE</span>
+                        <div>
+                            <h4 class="font-bold text-justin-main mb-1 text-sm">慢性的停滞感</h4>
+                            <p class="text-sm text-justin-sub leading-relaxed">「どうせ変わらない」「うちのような規模では無理だ」と、会社全体に諦めムードが漂っていた停滞期。</p>
+                        </div>
+                    </div>
+                    <div class="hidden md:flex md:col-span-1 justify-center items-center text-justin-accent bg-justin-white2">
+                        <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                    </div>
+                    <div class="md:col-span-4 p-6 bg-justin-accent/10 flex items-start gap-4 border-t md:border-t-0 border-justin-gray">
+                        <span class="text-[10px] font-bold px-2 py-0.5 bg-justin-accent text-white uppercase rounded-sm">AFTER</span>
+                        <div>
+                            <h4 class="font-bold text-justin-main mb-1 text-sm">前向きで圧倒的な熱量</h4>
+                            <p class="text-sm text-justin-main font-medium leading-relaxed">小さな成功体験を現場と共に積み重ねることで、スタッフから自発的な改善案が飛び出すほどの活気を奪還。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ⑦ MESSAGE SECTION -->
+    <section id="message" class="w-full bg-justin-white2 py-16 md:py-24 px-4 md:px-8 border-b border-justin-main">
+        <div class="max-w-5xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+                
+                <div class="md:col-span-5" data-aos="fade-right">
+                    <div class="border border-justin-main p-2 bg-white shadow-md">
+                        <div class="relative overflow-hidden aspect-[4/5] bg-justin-gray">
+                            <img src="https://images.unsplash.com/photo-1521898284481-a5ec348cb555?q=80&w=800&auto=format&fit=crop" 
+                                 alt="just in 代表メッセージイメージ" 
+                                 class="w-full h-full object-cover grayscale opacity-90">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:col-span-7 space-y-6" data-aos="fade-left">
+                    <span class="font-inter font-bold text-xs tracking-widest text-justin-accent block uppercase">MESSAGE</span>
+                    <h2 class="text-2xl md:text-3xl font-black text-justin-main tracking-tight">
+                        「放っておけない」が、<br>すべての始まりでした。
+                    </h2>
+                    
+                    <div class="space-y-4 text-sm leading-loose text-justin-main/90 font-medium">
+                        <p>
+                            物流の現場は美辞麗句だけでは回りません。泥をかぶり、汗を流し、ギリギリの状態で踏みとどまっている小規模物流会社の皆様を、私は数多く見てきました。
+                        </p>
+                        <p>
+                            長年の現場経験の中で培ったのは、「どんなに厳しい状況でも必ず突破口はある」という確信です。効率化のシステム導入やコンサルタントの正論だけでは、明日の荷物は動きません。あなたと同じ目線で汗を流し、責任を持って伴走する存在でありたい。
+                        </p>
+                        <p>
+                            たとえギリギリの状況であっても、私たちは絶対に目を離しません。現場の熱量こそが、日本の物流を支える最大の資産だからです。もう一度、一緒に前を向きましょう。
+                        </p>
+                    </div>
+
+                    <div class="pt-4 border-t border-justin-gray flex justify-between items-baseline">
+                        <span class="text-xs text-justin-sub font-inter uppercase font-bold tracking-widest">just in Representative</span>
+                        <span class="font-bold text-lg tracking-wide text-justin-main">just in 代表</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ⑧ CONTACT SECTION -->
+    <section id="contact" class="w-full bg-justin-main text-white py-16 md:py-20 px-4 md:px-8 text-center">
+        <div class="max-w-3xl mx-auto" data-aos="zoom-in">
+            <span class="font-inter font-bold text-xs tracking-widest text-justin-accent block mb-4 uppercase">GET IN TOUCH</span>
+            <h2 class="text-xl md:text-3xl font-bold tracking-tight mb-8 leading-relaxed">
+                止まりかけていることがあれば、<br class="md:hidden">まずは聞かせてください。
+            </h2>
+            <p class="text-sm text-gray-400 mb-12 max-w-xl mx-auto leading-loose">
+                相談窓口を狭めたくありません。かしこまったフォームでなくても結構です。現場の「困った」を、今すぐお伝えください。
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto text-sm font-bold">
+                <a href="https://lin.ee/XOs6qml" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 bg-[#24A148] hover:bg-[#1C8439] text-white py-3.5 px-4 transition-colors">
+                    <!-- インラインSVGに変更して表示崩れを防止 -->
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 10.304c0-5.369-5.383-9.738-12-9.738-6.616 0-12 4.369-12 9.738 0 4.814 4.269 8.846 10.036 9.564.39.084.922.258 1.058.592.122.303.08.777.04 1.084l-.169 1.023c-.05.303-.243 1.185 1.048.646 1.291-.539 6.957-4.099 9.485-7.016 2.499-2.884 2.494-5.893 2.494-5.893zm-16.712 3.16h-1.638a.514.514 0 01-.514-.514v-4.148a.514.514 0 01.514-.514h.341a.514.514 0 01.514.514v3.292h.783a.514.514 0 01.514.514v.341a.515.515 0 01-.514.515zm2.934 0h-.342a.515.515 0 01-.514-.514v-4.148a.514.514 0 01.514-.514h.342c.284 0 .514.23.514.514v4.148a.514.514 0 01-.514.514zm3.922 0h-.385a.517.517 0 01-.417-.213l-1.921-2.529v2.228a.514.514 0 01-.514.514h-.341a.514.514 0 01-.514-.514v-4.148a.514.514 0 01.514-.514h.387c.16 0 .31.073.414.199l1.921 2.531v-2.216a.514.514 0 01.514-.514h.341a.514.514 0 01.514.514v4.148a.514.514 0 01-.516.516zm3.996-.856a.514.514 0 01-.514.514h-1.649a.514.514 0 01-.514-.514v-4.148a.514.514 0 01.514-.514h1.649a.514.514 0 01.514.514v.341a.514.514 0 01-.514.514h-.794v.693h.794a.514.514 0 01.514.514v.341a.514.514 0 01-.514.514h-.794v.74h.794a.514.514 0 01.514.514v.341z"/></svg>
+                    LINE相談
+                </a>
+                <a href="mailto:support@justin-logi.jp" class="flex items-center justify-center gap-2 bg-justin-accent hover:bg-justin-accent/90 text-justin-main py-3.5 px-4 transition-colors">
+                    <i data-lucide="mail" class="w-4 h-4"></i>
+                    メール相談
+                </a>
+                <a href="https://forms.gle/y8tYJfmLAPGDFZsX8" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white py-3.5 px-4 border border-white/20 transition-colors">
+                    <i data-lucide="file-text" class="w-4 h-4"></i>
+                    Webフォーム
+                </a>
+            </div>
+            <p class="mt-8 text-[11px] text-gray-500 font-inter uppercase tracking-widest">support@justin-logi.jp</p>
+        </div>
+    </section>
+
+    <!-- ⑨ FOOTER SECTION -->
+    <footer class="w-full bg-justin-main text-gray-400 py-12 px-4 md:px-8 border-t border-white/10 text-xs">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left space-y-2">
+                <span class="font-inter font-black text-2xl text-white tracking-tighter block">just<span class="text-justin-accent">in</span></span>
+                <p class="text-gray-500 font-medium text-[11px] tracking-wider">必要な瞬間に、ちゃんと届く。</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center gap-4 md:gap-8 text-[11px] tracking-wider font-medium">
+                <p>© 2026 just in. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 6. Scripts (すべてのHTML要素が描画し終わるボディの最下部で実行) -->
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        // 外部スクリプトの読み込み完了を安全に待ってから実行
+        window.addEventListener('DOMContentLoaded', (event) => {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    once: true,
+                    offset: 60,
+                    duration: 800,
+                    easing: 'ease-out-cubic'
+                });
+            }
+        });
+    </script>
+</body>
+</html>
